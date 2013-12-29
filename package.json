@@ -2,9 +2,9 @@
   "name": "nondest",
   "version": "0.0.1",
   "description": "A tempfile creator for 'non-destructive' file operations in node.js",
-  "author": "Matt Bieber<github@spam.raszi.hu> (http://raszi.hu/)",
+  "author": "Matt Bieber",
 
-  "homepage": "http://github.com/raszi/node-tmp",
+  "homepage": "http://github.com/mattbieber/nondest",
   "keywords": [ "temporary", "tmp", "temp", "tempdir", "tempfile", "tmpdir", "tmpfile" ],
 
   "licenses": [
@@ -16,21 +16,21 @@
 
   "repository": {
     "type": "git",
-    "url":  "git://github.com/raszi/node-tmp.git"
+    "url":  "git://github.com/mattbieber/nondest.git"
   },
 
   "bugs": {
-    "url":  "http://github.com/raszi/node-tmp/issues"
+    "url":  "http://github.com/mattbieber/nondest/issues"
   },
 
-  "main": "lib/tmp.js",
+  "main": "lib/nondest.js",
 
   "scripts": {
-    "test": "vows test/*-test.js"
+    "test": "vows test/tests.js"
   },
 
   "engines": {
-    "node": ">=0.4.0"
+    "node": ">=0.6.0"
   },
 
   "dependencies": {},
