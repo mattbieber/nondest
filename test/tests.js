@@ -1,28 +1,44 @@
 
 var path = require('path'),
-    fs = require('fs'),
-    vows = require('vows'),
-    assert = require('assert'),
-    Nondest = require('../lib/nondest');
+	fs = require('fs'),
+	should = require('should');
+
+var nondest,
+	fixture,
+	err;
+
+describe('nondest test', function() {
+
+	before(function(done) {
+		nondest = require('../lib/nondest');
+		fixture = path.resolve('./fixtures/test01';
+		done();
+	});
+
+	after(function(done) {
+		done();
+	});
 
 
-var nondest = new Nondest();
-var tests = {
-    'nondest obj': {
-        topic: [],
-        'sll': function(topic) {
-            console.log('-->', nondest.id);
-            assert.isObject(nondest);    
-        }
-        
-    }
-};
-   
-process.on('uncaughtException', function(err) {
-    console.log('Caught exception: ' + err.stack);
-});   
+	it('should be a nondest object', function(done) {
+		nondest.should.be.an.Object;
+		nondest.should.have.ownProperty('create', 'remove');
+
+		done();
+	});
+
+	it('should be a nondest object', function(done) {
+		nondest.create(fixture, {}).on('available', function(tmppath) {
+			
+			console.log(tmppath);
+			done();
+		
+		}).on('error', function(e) {
+			err = e;
+			done();
+		});
+
+	});
 
 
-vows.describe('nondest tests')
-    .addBatch(tests)
-    .export(module);
+});

@@ -3,39 +3,40 @@
   "version": "0.0.1",
   "description": "A tempfile creator for 'non-destructive' file operations in node.js",
   "author": "Matt Bieber",
-
   "homepage": "http://github.com/mattbieber/nondest",
-  "keywords": [ "temporary", "tmp", "temp", "tempdir", "tempfile", "tmpdir", "tmpfile" ],
-
+  "keywords": [
+    "temporary",
+    "tmp",
+    "temp",
+    "tempdir",
+    "tempfile",
+    "tmpdir",
+    "tmpfile"
+  ],
   "licenses": [
     {
       "type": "MIT",
       "url": "http://opensource.org/licenses/MIT"
     }
   ],
-
   "repository": {
     "type": "git",
-    "url":  "git://github.com/mattbieber/nondest.git"
+    "url": "git://github.com/mattbieber/nondest.git"
   },
-
   "bugs": {
-    "url":  "http://github.com/mattbieber/nondest/issues"
+    "url": "http://github.com/mattbieber/nondest/issues"
   },
-
   "main": "lib/nondest.js",
-
   "scripts": {
     "test": "vows test/tests.js"
   },
-
   "engines": {
     "node": ">=0.6.0"
   },
-
   "dependencies": {},
-
   "devDependencies": {
-    "vows": "~0.7.0"
+    "vows": "~0.7.0",
+    "mocha": "~1.16.2",
+    "should": "~2.1.1"
   }
 }
