@@ -2,11 +2,13 @@
   "name": "nondest",
   "version": "0.0.1",
   "description": "A tempfile creator for 'non-destructive' file operations in node.js",
-  "author": "Matt Bieber",
+  "author": "Matt Bieber <matt@daftscholars.com>",
   "homepage": "http://github.com/mattbieber/nondest",
   "keywords": [
     "temporary",
+    "temporary files",
     "tmp",
+    "temporary",
     "temp",
     "tempdir",
     "tempfile",
@@ -28,14 +30,13 @@
   },
   "main": "lib/nondest.js",
   "scripts": {
-    "test": "vows test/tests.js"
+    "test": "test/tests.js"
   },
   "engines": {
     "node": ">=0.6.0"
   },
   "dependencies": {},
   "devDependencies": {
-    "vows": "~0.7.0",
     "mocha": "~1.16.2",
     "should": "~2.1.1"
   }

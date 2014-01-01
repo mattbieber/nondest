@@ -1,3 +1,6 @@
+/**
+ * nondest mocha tests
+ */
 
 var path = require('path'),
 	fs = require('fs'),
@@ -11,8 +14,8 @@ describe('nondest test', function() {
 
 	before(function(done) {
 		nondest = require('../lib/nondest');
-		fixture = path.resolve('./fixtures/test01';
-		done();
+		fixture = path.resolve('test/fixtures/test01');
+		done();''
 	});
 
 	after(function(done) {
@@ -27,18 +30,27 @@ describe('nondest test', function() {
 		done();
 	});
 
-	it('should be a nondest object', function(done) {
+	it('should have created a directory', function(done) {
+		this.timeout(0);
 		nondest.create(fixture, {}).on('available', function(tmppath) {
 			
-			console.log(tmppath);
+			var _isDirectory = fs.statSync(tmppath).isDirectory();
+			_isDirectory.should.be.true;
+
+			console.log(err);
 			done();
 		
 		}).on('error', function(e) {
 			err = e;
+
 			done();
 		});
 
 	});
 
+	it('should have not have thrown error while creating temp copy', function(done) {
+		err.should.equel(undefined);
+		done();
+	});
 
 });
