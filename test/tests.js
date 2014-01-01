@@ -32,7 +32,9 @@ describe('nondest tests', function() {
 
 		it('should have created a directory', function(done) {
 			this.timeout(0);
-			nondest_success.create(fixture_success, {}).on('available', function(tmppath) {		
+			nondest_success.create(fixture_success, { 
+				temppath: 'test/localtest'
+			}).on('available', function(tmppath) {		
 				var _isDirectory = fs.statSync(tmppath).isDirectory();
 				_isDirectory.should.be.true;
 				done();
