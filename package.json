@@ -29,9 +29,6 @@
     "url": "http://github.com/mattbieber/nondest/issues"
   },
   "main": "lib/nondest.js",
-  "scripts": {
-    "test": "test/tests.js"
-  },
   "engines": {
     "node": ">=0.6.0"
   },
