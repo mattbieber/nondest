@@ -7,6 +7,11 @@ nondest is for times when you need to be able to safely edit (or hack away at) t
 
 I've experienced file corruption during long running operations with open file streams, so with this I'm safely working on copied data.     
 
+## Node.js compatibility
+v0.6.0+
+
+[![Build Status](https://travis-ci.org/mattbieber/nondest.png)](https://travis-ci.org/mattbieber/nondest)
+
 ## Installation
 
 ```bash
