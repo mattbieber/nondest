@@ -1,4 +1,4 @@
-# ![alt text][logo] nondest
+# nondest
 
 Super simple, dependency-free temporary file creator for 'non-destructive' operations in your [`node.js`][1] app. 
 
